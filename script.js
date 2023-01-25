@@ -197,7 +197,7 @@ function createObjects() {
     // Player Circle
     objs[2] = new circle(512, 341.5, 0, 0, 20, "rgba(0,0,0,0)");
 
-    objs[3] = new circle(targetx, (targety + 150), 0, 0, 50, "rgba(0,0,0,0)");
+    objs[3] = new circle(targetx, (targety + 140), 0, 0, 50, "rgba(0,0,0,0)");
 
 
     // useless Obstacle
@@ -440,6 +440,8 @@ let lifepoints = 8
 
 let pain_sound9 = true
 let pain_sound1 = true;
+let pain_sound6 = true;
+let pain_sound8 = true;
 let pain_sound2 = true;
 let pain_sound5 = true;
 let pain_sound4 = true;
@@ -594,7 +596,7 @@ function monster_dectection() {
             monstVy[i] = bullety;
         }
     }
-    if (invincibleTime > 40) {
+    if (invincibleTime > 30) {
         // Player to boss intersection
         if (circleIntersect(objs[2].x, objs[2].y, objs[2].radius, monst[0].x, monst[0].y, monst[0].radius) && bossJump == false) {
             lifepoints -= 3;
