@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog" ).dialog();
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="dialog" title="Instruction">
+  <p>do pain sound effectI got the video--will,adam finish sound for fireballThe Village is in Danger!<br></br>You have been tasked with defeating the Goonie Glub, a monster that has been terrorizing the village for years.<br></br>We have recieved intel that the boss could be hibernating, in the event that this happens on your quest, <i> reload the page</i>s of your srcoll and take a nap<br></br>Use the mystical arts of WASD for movement, SPACE for Dodge Roll and Left Cick for FIREBALL! <br></br> Be warned, the dungeon is very unpredicatble and there are hazards everywhere. We STRONGLY RECOMMEND avoiding the suffocating walls.  <br></br>Good luck in your Endeavors!</p>
+</div>
+ 
+ 
+</body>
+</head>
+
+<!--
+<div id="main" 
+  <div id="parent1">
+  <dialog id="favDialog">
+    <form method="dialog">
+      <p>
+        <label>Select Topic:
+          <select>
+            <option value="default">Movement</option>
+            <!--          <option>Movement</option>
+          <option>Weapon Control</option>
+          <option>Lore</option>
+
+          </select>
+        </label>
+      </p>
+      <div>
+        <button value="cancel">Cancel</button>
+        <button id="confirmBtn" value="default">Confirm</button>
+      </div>
+    </form>
+  </dialog>
+  <p>
+    <button id="showDialog">Help</button>
+  </p>
+  <output></output>
+      </!-->
+
+  </body>
+    
+
+  
+
+    <Canvas
+      id="myCanvas" 
+      width=1024 height=683 
+      style="border: 1px solid #000000; 
+      background-color: #000000;"
+      onclick="shotBullets(event)">
+      <img id="water" width="15" height="15"
+src="water.png">
+      <img id = "ghost" width = "20" height = "20" src = "ghost.png">
+      <img id = "bossBullet" src = "Boss_Fireball.png">
+        
+      
+    </Canvas>
+  
+
+    <script src="Boss_HP/Bosshp.js"></script>
+    <script src="functions.js"></script>
+    <script src="script.js"></script>
+    <script src="collisions.js"></script>
+    <script src="boundariesscript.js.js"></script>
+    <script src="variables.js"></script>
+    <script src="playVideo.js"></script>
+
+
+
+    <video controls height="0" id="vid">
+        <source type="video/mp4" src="BOSS_DEAD.mp4"></source> 
+  </video>
+  <video controls height="0" id="deathVid">
+        <source type="video/mp4" src="dieToBoss.mp4"></source> 
+  </video>
+  <video controls height="0" id="regularDeath">
+        <source type="video/mp4" src="regular.mp4"></source> 
+  </video>
+  </body>
+
+</html>
+
+

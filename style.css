@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+
+/* \Turn everything into flexbot */
+
+/* 
+#main {
+  display: flex;
+  
+}
+
+#parent1{
+  
+flex: 1;
+}
+
+ */ 
+#myCanvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height:683;
+  width:1024;
+
+}
+
+
+#dialog {
+  font-family: 'Rubik Vinyl', cursive;
+  text-align: center; 
+  font-size:16px;
+  
+}
+
+#water{
+  height:10;
+  width:10;
+}
