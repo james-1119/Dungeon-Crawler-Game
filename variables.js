@@ -69,6 +69,7 @@ let targety = monsty;
 let vertical = 0;
 let horizontal = 0;
 
+
 // Declare sounds
 var dash_sound;
 dash_sound = new Audio("Sound_Effects/Dash.mp3");
