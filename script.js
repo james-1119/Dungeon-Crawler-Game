@@ -1,5 +1,5 @@
 // declares values and arrays
-
+let lastTime = 0;
 
 // Call the init function when the HTML window loads
 window.onload = init;
@@ -12,7 +12,6 @@ class Boundary {
         this.position = position;
         this.width = 48;
         this.height = 48;
-        this.lastTime = 0;
     }
     // draw the boundary at it's position
     draw() {
