@@ -1,5 +1,7 @@
 // declares values and arrays
 let lastTime = 0;
+const interval = 16;
+let timer = 0;
 
 // Call the init function when the HTML window loads
 window.onload = init;
@@ -78,8 +80,7 @@ function gameLoop(timestamp) {
 
     lastTime = timestamp;
 
-    console.log(deltaTime);
-    
+    if(timer > interval){
     // Clear the canvas on each loop
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -115,6 +116,11 @@ function gameLoop(timestamp) {
     monster_dectection();
     warningSignals();
     gameover();
+    }
+    else
+    {
+        timer += deltaTime;
+    }
 
 
 
