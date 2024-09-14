@@ -1,6 +1,6 @@
 // declares values and arrays
 let lastTime = 0;
-const interval = 16;
+const interval = 8;
 let timer = 0;
 
 // Call the init function when the HTML window loads
