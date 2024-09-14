@@ -81,41 +81,43 @@ function gameLoop(timestamp) {
     lastTime = timestamp;
 
     if(timer > interval){
-    // Clear the canvas on each loop
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Physics Options
-    collisioncolor = true; // Turn objects red on collision
-    //gravity = true; // Turn or off gravity
-    gravityvalue = 0.11; // Set the gravity value
-    restitution = 0.8; // Energy lost on a collision Multiplier (1 = off)
-    friction = 0.99; // Friction Multiplier (1 = off)
-    // console.log(backgroundx + " " + backgroundy)
-    player1speed = 4;
-
-
-    // My Functions
-    if (bossDeath != true) {
-        bossmove();
-    }
-    background();
-    dashed();
-    drawBound();
-    keyboardevents();
-    updatecircle();
-
-    createObjects();
-    spriteAnimations();
-    BossAnimations();
-    hpbar();
-    bosshp();
-
-    // Base functions 
-    detectCollisions();
-    detectEdgeCollisions();
-    monster_dectection();
-    warningSignals();
-    gameover();
+        // Clear the canvas on each loop
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+        // Physics Options
+        collisioncolor = true; // Turn objects red on collision
+        //gravity = true; // Turn or off gravity
+        gravityvalue = 0.11; // Set the gravity value
+        restitution = 0.8; // Energy lost on a collision Multiplier (1 = off)
+        friction = 0.99; // Friction Multiplier (1 = off)
+        // console.log(backgroundx + " " + backgroundy)
+        player1speed = 4;
+    
+    
+        // My Functions
+        if (bossDeath != true) {
+            bossmove();
+        }
+        background();
+        dashed();
+        drawBound();
+        keyboardevents();
+        updatecircle();
+    
+        createObjects();
+        spriteAnimations();
+        BossAnimations();
+        hpbar();
+        bosshp();
+    
+        // Base functions 
+        detectCollisions();
+        detectEdgeCollisions();
+        monster_dectection();
+        warningSignals();
+        gameover();
+    
+        timer = 0;
     }
     else
     {
