@@ -121,9 +121,9 @@ function gameLoop(timestamp) {
     }
     else
     {
-        timer += deltaTime;
+        timer = timer + deltaTime;
     }
-    console.log(timer);
+    console.log("timer: "+timer);
 
 
 
