@@ -12,6 +12,7 @@ class Boundary {
         this.position = position;
         this.width = 48;
         this.height = 48;
+        this.lastTime = 0;
     }
     // draw the boundary at it's position
     draw() {
@@ -73,6 +74,13 @@ function init() {
 // console.log(boundaries)
 
 function gameLoop(timestamp) {
+
+    const deltaTime = timestamp - lastTime;
+
+    lastTime = timestamp;
+
+    console.log(deltaTime);
+    
     // Clear the canvas on each loop
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
