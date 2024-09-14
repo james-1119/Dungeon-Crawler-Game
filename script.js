@@ -121,6 +121,7 @@ function gameLoop(timestamp) {
     {
         timer += deltaTime;
     }
+    console.log(timer);
 
 
 
