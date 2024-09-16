@@ -559,8 +559,3 @@ function colorgenerator() {
   return "#" + randomColor;
 };
 
-
-// project to add joystick
-// var Joy1 = new JoyStick('joy1Div', {}, function(stickData) {
-//     jd = stickData.cardinalDirection;
-// });
