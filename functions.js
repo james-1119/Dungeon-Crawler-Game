@@ -19,9 +19,6 @@ window.addEventListener('keyup', function(e) {
   keyState[e.keyCode || e.which] = false;
 }, true);
 
-// if (objs[2].x + objs[2].radius >= testBoundary.position.x){
-//   console.log("colliding");
-// }
 
 // creating a dash function for the character
 function dashed() {
@@ -93,13 +90,10 @@ function keyboardevents() {
       }
       for (let i = 0; i < enemyBullet.length; i++) {
         enemyBullet[i].y -= player1speed;
-        //bulletImg[i].y -= player1speed;
       }
     }
 
-    //console.log(lastkey);
     lastkey = "s";
-    //boundary.position.y -= player1speed;
     testBoundary.position.y -= player1speed;
   }else{
       moving = false
@@ -121,13 +115,11 @@ function keyboardevents() {
       }
       for (let i = 0; i < enemyBullet.length; i++) {
         enemyBullet[i].y += player1speed;
-        //bulletImg[i].y -= player1speed;
       }
     }
 
     //console.log(lastkey);
     lastkey = "w";
-    //boundary.position.y += player1speed;
     testBoundary.position.y += player1speed;
   }
   // player move right
@@ -146,13 +138,11 @@ function keyboardevents() {
       }
       for (let i = 0; i < enemyBullet.length; i++) {
         enemyBullet[i].x -= player1speed;
-        //bulletImg[i].y -= player1speed;
       }
     }
 
     //console.log(lastkey);
     lastkey = "d";
-    //boundary.position.x -=player1speed;
     testBoundary.position.x -= player1speed;
   }
 
@@ -172,13 +162,10 @@ function keyboardevents() {
       }
       for (let i = 0; i < enemyBullet.length; i++) {
         enemyBullet[i].x += player1speed;
-        //bulletImg[i].y -= player1speed;
       }
     }
 
-    //console.log(lastkey);
     lastkey = "a";
-    // boundary.position.x +=player1speed;
     testBoundary.position.x += player1speed;
 
   }
@@ -258,13 +245,8 @@ function updatecircle() {
 
   //bullet image movement
   for (i = 0; i < bulletImg.length; i++) {
-    //ctx.beginPath();
     var image = document.getElementById("water");
     ctx.drawImage(image, bulletImg[i].x + 30, bulletImg[i].y + 5, 30, 30);
-
-
-
-    //ctx.fill();
 
 
     bulletImg[i].x += bulletImg[i].vx * 10;
@@ -313,16 +295,16 @@ function updatecircle() {
       
     if (attackType == 1){
       enemyBullet[i].x += enemyBullet[i].vx * 8;
-    enemyBullet[i].y += enemyBullet[i].vy * 8;
+      enemyBullet[i].y += enemyBullet[i].vy * 8;
     }
 
-      if(attackType == 2){
-        enemyBullet[i].x += enemyBullet[i].vx * 0.6;
-    enemyBullet[i].y += enemyBullet[i].vy * 0.6;
-      }
+    if(attackType == 2){
+      enemyBullet[i].x += enemyBullet[i].vx * 0.6;
+      enemyBullet[i].y += enemyBullet[i].vy * 0.6;
+    }
     if (attackType == 3){
       enemyBullet[i].x += enemyBullet[i].vx * 20;
-    enemyBullet[i].y += enemyBullet[i].vy * 20;
+      enemyBullet[i].y += enemyBullet[i].vy * 20;
     }
 
     if (enemyBullet[i].vy > 0) {
@@ -340,8 +322,8 @@ function updatecircle() {
   }
   // Update the positon of each circle. Iterates through every circle in the array.
   for (i = 0; i < objs.length; i++) {
-    if (gravity == true) {
-      objs[i].vy += gravityvalue;
+      if (gravity == true) {
+        objs[i].vy += gravityvalue;
     }
     // Draw each circle
     ctx.beginPath();
